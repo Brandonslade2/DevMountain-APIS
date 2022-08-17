@@ -1,0 +1,164 @@
+h2 {
+    font-family: 'Adobe Devanagari';
+    text-decoration: underline
+}
+
+h3 {
+    font-size: 15px;
+    color: crimson
+}
+
+
+h4 {
+	text-align: center;
+}
+
+
+body {
+  background: #ddd;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+	border-bottom: 2px solid orange;
+}
+
+ol {
+	padding-left: 0;
+}
+
+.crumb {
+	margin-right: 2em;
+	display: inline;
+}
+
+.crumb2 {
+    margin-right: 2em;
+    display: center;
+}
+
+a {
+	color: orange;
+}
+
+a:visited {
+	color: crimson;
+}
+
+
+input {
+	display: block;
+}
+
+img {
+	max-width: 300px;
+	width: 100%;
+    height: 100%; 
+    object-fit: contain;
+}
+
+fieldset {
+	min-width: 100px;
+	display: inline-block;
+}
+
+fieldset input{
+	float: right;
+}
+
+.blackcircle{
+    height: 130px;
+    width: 270.286px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.somepicsbox {
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    height: 25%;
+    background-color: white;
+    border: 1vh solid black;
+    display: flex;
+    gap: 40px;
+    align-items: flex-end; 
+}
+
+/*"You are encouraged to do independent research how how to change the size and color
+    of HTML buttons using CSS. Get practice searching the internet for proper documentation on HTML/CSS!"*/
+/*Don't give me credit for everything else but the yellow and sizing! I found this online but then just changed the color to yellow and made a proper size.*/
+
+
+.glow-on-hover {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: black;
+    background: yellow;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+.glow-on-hover:active {
+        color: #000
+    }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: yellow;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
